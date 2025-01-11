@@ -18,6 +18,9 @@ const config = {
   		},
   	},
   	extend: {
+  		fontFamily: {
+  			innovator: ['var(--font-innovator)'],
+  		},
   		colors: {
   			foreground: "hsl(var(--foreground))",
   			border: "hsl(var(--border))",

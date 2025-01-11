@@ -16,7 +16,7 @@ export function RevealImageListItem({ text, images }: ShowImageListItemProps) {
     "relative duration-500 delay-100 shadow-none group-hover:shadow-xl scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-16 h-16 overflow-hidden transition-all rounded-md";
 
   return (
-    <div className="group relative h-fit w-fit overflow-visible py-8">
+    <div className="group relative h-fit w-fit overflow-visible py-2">
       <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white transition-all duration-500 group-hover:opacity-40">
         {text}
       </h1>
