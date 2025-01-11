@@ -47,9 +47,11 @@ export default function Home() {
           />
           <div className="w-full text-center">For Founders Like You</div>
         </div>
-        <HoverButton className="text-white">
-          Join Waitlist
-        </HoverButton>
+        <a href="https://tally.so/r/mJX8rd" target="_blank" rel="noopener noreferrer">
+          <HoverButton className="text-white">
+            Join Waitlist
+          </HoverButton>
+        </a>
       </div>
 
       {/* Noise Overlay */}
