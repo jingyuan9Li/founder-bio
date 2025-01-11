@@ -16,6 +16,19 @@ interface HoverButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(
   ({ className, children, ...props }, ref) => {
+    const buttonRef = React.useRef<HTMLButtonElement | null>(null);
+    const combinedRef = React.useCallback(
+      (element: HTMLButtonElement | null) => {
+        buttonRef.current = element;
+        if (typeof ref === 'function') {
+          ref(element);
+        } else if (ref) {
+          ref.current = element;
+        }
+      },
+      [ref]
+    );
+
     const [isListening, setIsListening] = React.useState(false)
     const [circles, setCircles] = React.useState<Array<{
       id: number
@@ -27,7 +40,7 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(
     const lastAddedRef = React.useRef(0)
 
     const createCircle = React.useCallback((x: number, y: number) => {
-      const buttonWidth = (ref as React.RefObject<HTMLButtonElement>).current?.offsetWidth || 0
+      const buttonWidth = buttonRef.current?.offsetWidth || 0
       const xPos = x / buttonWidth
       const color = `linear-gradient(to right, var(--circle-start) ${xPos * 100}%, var(--circle-end) ${
         xPos * 100
@@ -91,7 +104,7 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(
 
     return (
       <button
-        ref={ref}
+        ref={combinedRef}
         className={cn(
           "relative isolate px-8 py-3 rounded-3xl",
           "text-foreground font-medium text-base leading-6",
