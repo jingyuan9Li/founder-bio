@@ -39,7 +39,7 @@ export function WordRotate({
       <AnimatePresence mode="wait">
         <motion.h1
           key={words[index]}
-          className={cn(className)}
+          className={cn("silver-gradient-text", className)}
           {...framerProps}
         >
           {words[index]}

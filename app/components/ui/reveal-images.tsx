@@ -17,7 +17,7 @@ export function RevealImageListItem({ text, images }: ShowImageListItemProps) {
 
   return (
     <div className="group relative h-fit w-fit overflow-visible py-2">
-      <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white transition-all duration-500 group-hover:opacity-40">
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-black silver-gradient-text transition-all duration-500 group-hover:opacity-40">
         {text}
       </h1>
       <div className={container}>

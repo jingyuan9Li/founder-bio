@@ -53,8 +53,8 @@ export default function Home() {
       
       {/* Content */}
       <div className="relative z-30 flex flex-col items-center justify-center min-h-screen gap-8 px-4">
-        <div className="text-5xl md:text-6xl lg:text-7xl font-black text-white text-center max-w-4xl flex flex-wrap justify-center items-baseline leading-[1.1] md:leading-[1.1]">
-          <span>The </span>
+        <div className="text-5xl md:text-6xl lg:text-7xl font-black text-center max-w-4xl flex flex-wrap justify-center items-baseline leading-[1.1] md:leading-[1.1]">
+          <span className="silver-gradient-text">The </span>
           <div className="inline-block w-[220px] md:w-[280px] lg:w-[340px] mx-1 -my-4 md:-my-2">
             <WordRotate
               words={["Ultimate", "Coolest", "Buzziest", "Sleekist"]}
@@ -65,7 +65,7 @@ export default function Home() {
             text="Bio Page"
             images={bioPageImages}
           />
-          <div className="w-full text-center mt-2 md:mt-0">For Founders Like You</div>
+          <div className="w-full text-center mt-2 md:mt-0 silver-gradient-text">For Founders Like You</div>
         </div>
         <a href="https://tally.so/r/mJX8rd" target="_blank" rel="noopener noreferrer">
           <HoverButton className="text-white">

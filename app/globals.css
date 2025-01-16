@@ -6,6 +6,22 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.silver-gradient-text {
+  background: linear-gradient(
+    145deg,
+    #FFFFFF 0%,
+    #E8E9F2 20%,
+    #CFD1DC 40%,
+    #B7BAC7 60%,
+    #9397A8 80%,
+    #7A7E91 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
